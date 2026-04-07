@@ -12,14 +12,14 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # Load Models
 try:
-    model_payload = joblib.load("recommendation_model.pkl")
+    model_payload = joblib.load("model/recommendation_model.pkl")
     regressor = model_payload["regressor"]
     embedding_map = model_payload["embedding_map"]
     feature_names = model_payload["features"]
 except:
     regressor = None
 
-with open("chatbot_model.pkl", "rb") as f:
+with open("model/chatbot_model.pkl", "rb") as f:
     chatbot_config = pickle.load(f)
 
 load_dotenv(override=True)
