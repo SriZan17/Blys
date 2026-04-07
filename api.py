@@ -10,9 +10,6 @@ import pandas as pd
 from datetime import datetime
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-# App Init
-app = FastAPI(title="Blys API")
-
 # Load Models
 try:
     model_payload = joblib.load("recommendation_model.pkl")
@@ -25,14 +22,15 @@ except:
 with open("chatbot_model.pkl", "rb") as f:
     chatbot_config = pickle.load(f)
 
-# Load the .env file
 load_dotenv(override=True)
 api_key = os.getenv("OPENAI_API_KEY")
 if api_key:
     api_key = api_key.strip('\"\'')
 client = OpenAI(api_key=api_key)
-
 analyzer = SentimentIntensityAnalyzer()
+
+# App Init
+app = FastAPI(title="Blys API")
 
 # Schemas
 class RecommendRequest(BaseModel):
