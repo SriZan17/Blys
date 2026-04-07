@@ -8,6 +8,7 @@ import pickle
 from dotenv import load_dotenv
 import pandas as pd
 from datetime import datetime
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # Load Models
@@ -26,6 +27,7 @@ load_dotenv(override=True)
 api_key = os.getenv("OPENAI_API_KEY")
 if api_key:
     api_key = api_key.strip('\"\'')
+nltk.download('vader_lexicon')
 client = OpenAI(api_key=api_key)
 analyzer = SentimentIntensityAnalyzer()
 
