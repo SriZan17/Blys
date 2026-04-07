@@ -1,6 +1,6 @@
 # Blys
 
-This project implements an **end-to-end AI system** for analyzing customer behavior, generating personalized recommendations, and enabling intelligent customer interactions via an NLP-powered chatbot.
+This project implements an **end-to-end AI system** for analyzing customer behavior, generating personalized recommendations, and enabling intelligent customer interactions via an NLP-powered chatbot. The docs for the project can be found at: https://blys.onrender.com/docs
 
 ---
 
