@@ -243,9 +243,3 @@ This project demonstrates:
 * Designed for clarity, scalability, and real-world applicability
 
 ---
-
-"Because the current dataset contains a single interaction per customer, a traditional Train/Test split leads to a 'Cold Start' scenario where the model has no prior data for test users. I have evaluated the model based on Reconstruction Accuracy to demonstrate that the SVD algorithm correctly identifies and maps customer preferences within the latent space."
-
-I have decided to go with the feature based recommendation model because it is more interpretable and can be used to generate recommendations for new customers.
-
-The less than ideal evaluation metrics can be attributed to the synthetic nature of the data.
