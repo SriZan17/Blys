@@ -8,3 +8,4 @@ openai
 joblib
 python-multipart
 pydantic
+python-dotenv   
